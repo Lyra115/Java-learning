@@ -38,14 +38,15 @@ public class Analyzer {
         if (length == null)
             return;
         
-        // TODO (extra credit): enable the three commented parts when OptimalSimulator is finished
-        
-        // boolean optimal=readMethod(input);
+        // (extra credit)
+        boolean optimal = readMethod(input);
+
         System.out.println();
-        // if(optimal)
-        //     OptimalSimulator.simulate(probability,floors,elevators,length);
-        // else
-        Simulator.simulate(probability, floors, elevators, length);
+        if (optimal)
+            OptimalSimulator.simulate(probability, floors, elevators, length);
+        else
+            Simulator.simulate(probability, floors, elevators, length);
+
 	}
 	
 	/**

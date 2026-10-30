@@ -1,37 +1,35 @@
 # Java Data Structure Applications / Java 数据结构应用
 
-本仓库包含两个面向实际流程的 Java 控制台应用：有序音频播放列表管理，以及基于 RFID 的零售库存跟踪。两个项目都直接实现底层数据结构，未将核心存储委托给集合框架。
+A collection of Java console projects demonstrating data structures, stateful simulations, and practical problem solving. Each project includes source code, bilingual documentation, and build instructions.
 
-This repository contains two Java console applications built around practical workflows: ordered audio playlist management and RFID-based retail inventory tracking. Both implement their core storage structures directly rather than delegating them to collection classes.
+这里整理了我的 Java 数据结构与控制台应用作品，涵盖顺序存储、自定义链表和多电梯调度模拟。每个项目都有源代码、中英文说明及编译运行方法。
 
-## Projects / 项目
+## Projects / 项目列表
 
-| Project / 项目 | Purpose / 功能 | Core implementation / 核心实现 |
+| Project / 项目 | What it does / 功能 | Engineering highlights / 技术亮点 |
 | --- | --- | --- |
-| [Audio Playlist Manager / 音频播放列表管理器](playlist%20of%20audio%20files/README.md) | Organize song metadata and manage named playlists / 管理歌曲信息与多个具名播放列表 | Fixed-capacity array, positional updates, deep copying / 定长数组、按位置更新与深拷贝 |
-| [RFID Inventory Manager / RFID 库存管理器](doubly-linked%20list%20application/README.md) | Track items across shelves, carts, and checkout / 跟踪货架、购物车与结账状态 | Custom doubly linked list, ordered insertion, node removal / 自定义双向链表、有序插入与节点删除 |
-
-两个应用仅依赖 Java 标准库。它们体现了领域数据、存储操作与控制台交互的拆分，也记录了遍历、插入、查找和删除的复杂度。
-
-Both applications use only the Java standard library. They separate domain records, storage operations, and console interaction, and document the costs of traversal, insertion, lookup, and removal.
+| [Elevator Simulation / 电梯调度模拟](elevator%20simulation/README.md) | Simulate passenger requests and multiple elevators / 模拟请求与多电梯运行 | FIFO queue, state machine, SCAN-inspired multi-passenger dispatch, custom console visualization / 队列、状态机、同向多乘客调度与自制调试可视化 |
+| [Audio Playlist Manager / 音频播放列表管理器](playlist%20of%20audio%20files/README.md) | Maintain song metadata and named playlists / 管理歌曲与具名播放列表 | Fixed-capacity array, positional updates, deep copy / 定长数组、按位置更新与深拷贝 |
+| [RFID Inventory Manager / RFID 库存管理器](doubly-linked%20list%20application/README.md) | Track items through shelves, carts, and checkout / 跟踪商品在货架、购物车和结账流程中的状态 | Custom doubly linked list, ordered insertion, node removal / 自定义双向链表、有序插入与节点删除 |
 
 ## Getting started / 开始使用
 
-从仓库根目录克隆 `homework` 分支，并按项目 README 中的命令编译和运行：
+Clone the `homework` branch, open a project folder, and follow that project's README. A working JDK is required.
 
-Clone the `homework` branch, then build and run either project using the commands in its README:
+克隆 `homework` 分支后，进入对应项目文件夹，按项目 README 中的命令编译运行。需要安装 JDK。
 
 ```sh
 git clone --branch homework --single-branch https://github.com/Lyra115/Java-learning.git
 cd Java-learning
 ```
 
-需要可用的 JDK（包含 `javac` 和 `java`）。项目指南将编译产物写入 `out` 目录。
+## What these projects demonstrate / 项目能力
 
-A JDK with `javac` and `java` available is required. The project guides place compiled classes in the `out` directory.
+- Data structures chosen for specific tasks, with complexity notes where relevant. / 面向实际需求选择数据结构，并关注时间复杂度。
+- Separation of input handling, domain state, and core operations. / 分离输入处理、领域状态和核心操作。
+- Validation, error handling, and documented trade-offs. / 输入校验、异常处理及设计权衡。
+- Instrumentation for understanding behavior: the elevator project adds a switchable step-by-step console view. / 电梯项目额外提供可切换的逐步控制台可视化，帮助理解运行过程。
 
-## Scope / 项目范围
+The projects are educational console applications. They use the standard Java libraries; they do not rely on a database, graphical interface, or real RFID/elevator hardware.
 
-这两个程序均为交互式内存应用，运行期间维护状态；不包含数据库持久化、图形界面、外部服务集成或真实 RFID 硬件接入。
-
-Both applications are interactive and in-memory. They maintain state during a session and do not include database persistence, a graphical interface, external service integrations, or physical RFID hardware.
+这些项目是学习与实践性质的 Java 控制台程序，使用 Java 标准库，不依赖数据库、图形界面或真实 RFID/电梯硬件。
